@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Pami & Mami | Handmade by Burcu</title>
+    <meta name="description" content="Miniklerin hassas cildi için %100 el yapımı, organik ve doğal bebek ürünleri. Pami & Mami ile sevgiyle örülen patikler, oyuncaklar ve aksesuarlar.">
+    <meta name="keywords" content="handmade, bebek ürünleri, el yapımı, organik oyuncak, amigurumi, bebek patiği, pami und mami">
+    <meta name="author" content="Burcu">
+
+    <!-- Social Media (Open Graph) - Instagram/Facebook/WhatsApp Önizlemesi -->
+    <meta property="og:title" content="Pami & Mami | Handmade with Love">
+    <meta property="og:description" content="Miniklerin için en doğal dokunuş. %100 el emeği bebek koleksiyonunu keşfet.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=800&auto=format&fit=crop">
+    <meta property="og:url" content="https://pamiundmami.com">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">pami <span>&</span> mami</a>
+
+        <ul class="nav-links">
+            <li><a href="#">Anasayfa</a></li>
+            <li><a href="#">Ürünler</a></li>
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <!-- Admin Ürün Ekle Butonu (Gizli Başlar) -->
+            <button id="adminAddProductBtn" class="admin-btn" style="display: none;">
+                <i class="fa-solid fa-plus"></i> Ürün Ekle
+            </button>
+
+            <!-- Kullanıcı İşlemleri -->
+            <div class="user-actions">
+                <i class="fa-regular fa-heart" id="wishlistIcon"></i>
+                <i class="fa-regular fa-user" id="loginIcon"></i>
+            </div>
+
+            <div class="cart-icon">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="cart-count">0</span>
+            </div>
+            
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="tagline">🌿 %100 El Emeği & Doğal</span>
+            <h1>Miniklerin İçin <br> En Doğal Dokunuş</h1>
+            <p>Her ilmeğinde sevgi, her detayında özen var. Pami & Mami'nin masalsı dünyasına hoş geldin.</p>
+            <a href="#products" class="cta-button">Koleksiyonu Keşfet</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=800&auto=format&fit=crop" alt="Handmade Baby Products">
+            
+            <div class="sticker-badge">
+                <i class="fa-solid fa-heart"></i>
+                <span>Handmade<br>by Burcu</span>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="products-section">
+        <div class="section-header">
+            <span class="sub-title">🌿 Özenle Hazırlandı</span>
+            <h2>Yeni Koleksiyon</h2>
+            <p>Miniklerin hassas cildi için en doğal iplerle örüldü.</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Ürünler JavaScript ile buraya yüklenecek -->
+            <p style="width: 100%; text-align: center;">Ürünler yükleniyor...</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#" class="secondary-btn">Tüm Ürünleri Gör</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>pami & mami</h3>
+                <p>Sevgiyle örülen, doğallıkla sarılan minik dünyalar. Her ilmekte bir hikaye var.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Kurumsal</h4>
+                <ul>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">İletişim</a></li>
+                    <li><a href="#">S.S.S.</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Yasal (Rechtliches)</h4>
+                <ul>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="agb.html">AGB & Widerruf</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Takipte Kalın</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2024 Pami & Mami. Tüm hakları saklıdır. Handmade with ❤️ in Germany.
+        </div>
+    </footer>
+
+    <!-- COOKIE BANNER -->
+    <div class="cookie-container">
+        <div class="cookie-content">
+            <p>🍪 Bu web sitesi, en iyi deneyimi yaşamanız için çerezleri kullanır.</p>
+            <p><a href="datenschutz.html">Gizlilik Politikası</a> sayfamızdan daha fazla bilgi edinebilirsiniz.</p>
+        </div>
+        <button class="cookie-btn">Kabul Et</button>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Giriş Yap</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>E-Posta</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Şifre</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%;">Giriş</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WISHLIST MODAL -->
+    <div id="wishlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Favorilerim ❤️</h2>
+            <div id="wishlistItems" style="max-height: 300px; overflow-y: auto;">
+                <!-- JS ile dolacak -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD PRODUCT MODAL (ADMIN) -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Yeni Ürün Ekle</h2>
+            <form id="addProductForm">
+                <input type="text" id="prodName" placeholder="Ürün Adı" required class="modal-input">
+                <input type="text" id="prodCategory" placeholder="Kategori (Örn: Organik Pamuk)" required class="modal-input">
+                <input type="text" id="prodPrice" placeholder="Fiyat (Örn: 12.90 €)" required class="modal-input">
+                <input type="text" id="prodImage" placeholder="Görsel URL (https://...)" required class="modal-input">
+                <select id="prodBadge" class="modal-input">
+                    <option value="">Etiket Yok</option>
+                    <option value="Yeni">Yeni</option>
+                    <option value="Popüler">Popüler</option>
+                    <option value="İndirim">İndirim</option>
+                </select>
+                <button type="submit" class="cta-button" style="width: 100%;">Yayınla</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

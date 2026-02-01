@@ -1,0 +1,15 @@
+/* Pami Und Mami - Base Styles */
+:root {
+    --bg-color: #FDFBF7;
+    --primary-color: #C6A477;
+    --text-color: #2D2D2D;
+    --accent-color: #EBCFC4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+}
