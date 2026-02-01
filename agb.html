@@ -11,14 +11,25 @@
 
     <!-- HEADER -->
     <header>
-        <a href="index.html" class="logo">pami <span>&</span> mami</a>
+        <a href="index.html" class="logo">pami und mami</a>
         <ul class="nav-links">
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="#">Ürünler</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="index.html#products">Produkte</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Kontakt</a></li>
         </ul>
         <div style="display: flex; gap: 20px; align-items: center;">
+            <!-- Dil Seçeneği -->
+            <div class="language-selector">
+                <button class="lang-btn">DE <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></button>
+                <div class="lang-dropdown">
+                    <a href="#">English <span>EN</span></a>
+                    <a href="#">Nederlands <span>NL</span></a>
+                    <a href="#">Français <span>FR</span></a>
+                    <a href="#">Español <span>ES</span></a>
+                </div>
+            </div>
+
             <div class="cart-icon">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="cart-count">0</span>
@@ -50,6 +61,7 @@
             <h2 style="margin-top: 20px;">3. Preise und Versandkosten</h2>
             <p>
                 Die auf den Produktseiten genannten Preise enthalten die gesetzliche Mehrwertsteuer und sonstige Preisbestandteile.
+                Aufgrund des Kleinunternehmerstatus gem. § 19 UStG erheben wir keine Umsatzsteuer und weisen diese daher auch nicht aus.
             </p>
 
             <h2 style="margin-top: 20px;">4. Bezahlung</h2>
@@ -73,14 +85,15 @@
             <div class="footer-brand">
                 <h3>pami & mami</h3>
                 <p>Sevgiyle örülen, doğallıkla sarılan minik dünyalar. Her ilmekte bir hikaye var.</p>
+                <p>Mit Liebe gestrickte, natürlich umhüllte kleine Welten.<br>Am Omnibushof 12, 13593 Berlin</p>
             </div>
             
             <div class="footer-links">
-                <h4>Kurumsal</h4>
+                <h4>Unternehmen</h4>
                 <ul>
-                    <li><a href="#">Hakkımızda</a></li>
-                    <li><a href="#">İletişim</a></li>
-                    <li><a href="#">S.S.S.</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
 
@@ -102,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2024 Pami & Mami. Tüm hakları saklıdır. Handmade with ❤️ in Germany.</div>
+        <div class="footer-bottom">&copy; 2024 Pami & Mami. Alle Rechte vorbehalten. Handmade with ❤️ in Berlin.</div>
     </footer>
     <script src="script.js"></script>
 </body>

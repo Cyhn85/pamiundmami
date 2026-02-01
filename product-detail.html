@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tavşan Kulaklı Patik | Pami & Mami</title>
+    <title>Hasenohr-Babyschuhe | Pami & Mami</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,14 +11,25 @@
 
     <!-- HEADER (Aynı kalacak) -->
     <header>
-        <a href="index.html" class="logo">pami <span>&</span> mami</a>
+        <a href="index.html" class="logo">pami und mami</a>
         <ul class="nav-links">
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="#">Ürünler</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="index.html#products">Produkte</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Kontakt</a></li>
         </ul>
         <div style="display: flex; gap: 20px; align-items: center;">
+            <!-- Dil Seçeneği -->
+            <div class="language-selector">
+                <button class="lang-btn">DE <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></button>
+                <div class="lang-dropdown">
+                    <a href="#">English <span>EN</span></a>
+                    <a href="#">Nederlands <span>NL</span></a>
+                    <a href="#">Français <span>FR</span></a>
+                    <a href="#">Español <span>ES</span></a>
+                </div>
+            </div>
+
             <div class="cart-icon">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="cart-count">0</span>
@@ -41,20 +52,20 @@
 
             <!-- Sağ: Bilgiler -->
             <div class="detail-info">
-                <span class="detail-category">El Örgüsü / Bebek Giyim</span>
-                <h1>Tavşan Kulaklı Patik</h1>
-                <div class="detail-price">12.90 €</div>
+                <span class="detail-category">Handgestrickt / Babykleidung</span>
+                <h1>Hasenohr-Babyschuhe</h1>
+                <div class="detail-price">12.90 € <span style="font-size: 0.8rem; font-weight: normal; color: #777; display: block;">Kein Ausweis von Umsatzsteuer, da Kleinunternehmer gemäß § 19 UStG.</span></div>
                 
                 <p class="detail-description">
-                    Minik ayaklar üşümesin! %100 organik pamuk ipliğinden, sevgiyle örüldü. 
-                    Yumuşacık dokusuyla bebeğinizin cildini tahriş etmez. 
-                    Özel günlerde hediye etmek için harika bir seçenek.
+                    Damit kleine Füße nicht frieren! Mit Liebe aus 100% Bio-Baumwollgarn gestrickt.
+                    Die weiche Textur reizt die Haut Ihres Babys nicht.
+                    Eine wunderbare Geschenkoption für besondere Anlässe.
                 </p>
 
                 <ul class="detail-features">
-                    <li><i class="fa-solid fa-check"></i> %100 Organik Pamuk</li>
-                    <li><i class="fa-solid fa-check"></i> Anti-Alerjik</li>
-                    <li><i class="fa-solid fa-check"></i> Elde Yıkanabilir</li>
+                    <li><i class="fa-solid fa-check"></i> 100% Bio-Baumwolle</li>
+                    <li><i class="fa-solid fa-check"></i> Antiallergisch</li>
+                    <li><i class="fa-solid fa-check"></i> Handwäsche</li>
                 </ul>
 
                 <div class="purchase-area">
@@ -63,7 +74,7 @@
                         <input type="number" value="1" min="1">
                         <button>+</button>
                     </div>
-                    <button class="add-to-cart-btn-large">Sepete Ekle</button>
+                    <button class="add-to-cart-btn-large">In den Warenkorb</button>
                 </div>
             </div>
         </div>
@@ -74,15 +85,15 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>pami & mami</h3>
-                <p>Sevgiyle örülen, doğallıkla sarılan minik dünyalar. Her ilmekte bir hikaye var.</p>
+                <p>Mit Liebe gestrickte, natürlich umhüllte kleine Welten.<br>Am Omnibushof 12, 13593 Berlin</p>
             </div>
             
             <div class="footer-links">
-                <h4>Kurumsal</h4>
+                <h4>Unternehmen</h4>
                 <ul>
-                    <li><a href="#">Hakkımızda</a></li>
-                    <li><a href="#">İletişim</a></li>
-                    <li><a href="#">S.S.S.</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">FAQ</a></li>
                 </ul>
             </div>
 
@@ -96,7 +107,7 @@
             </div>
 
             <div class="footer-links">
-                <h4>Takipte Kalın</h4>
+                <h4>Folgen Sie uns</h4>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -106,7 +117,7 @@
         </div>
         
         <div class="footer-bottom">
-            &copy; 2024 Pami & Mami. Tüm hakları saklıdır. Handmade with ❤️ in Germany.
+            &copy; 2024 Pami & Mami. Alle Rechte vorbehalten. Handmade with ❤️ in Berlin.
         </div>
     </footer>
 

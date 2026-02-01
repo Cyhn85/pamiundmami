@@ -105,37 +105,57 @@ app.post('/api/orders', (req, res) => {
     const orderData = req.body;
     
     console.log('📦 Yeni Sipariş Geldi:', orderData);
-    
-    // E-posta İçeriği Hazırla
-    const mailOptions = {
-        from: '"Pami & Mami Shop" <siparis@pamiundmami.com>',
-        to: "admin@pamiundmami.com", // Siparişin bildirileceği sizin adresiniz
-        subject: `Yeni Sipariş: #${Date.now()}`,
-        html: `
-            <h1>🎉 Yeni Sipariş Alındı!</h1>
-            <p><strong>Müşteri:</strong> ${orderData.customer.name}</p>
-            <p><strong>E-Posta:</strong> ${orderData.customer.email}</p>
-            <p><strong>Toplam Tutar:</strong> ${orderData.total}</p>
-            <hr>
-            <h3>Sipariş Detayları:</h3>
-            <ul>
-                ${orderData.items.map(item => `<li>${item.name} - ${item.quantity} Adet (${item.price})</li>`).join('')}
-            </ul>
-            <hr>
-            <p><strong>Teslimat Adresi:</strong><br>
-            ${orderData.customer.address}<br>
-            ${orderData.customer.zip} ${orderData.customer.city}</p>
-        `
-    };
 
-    // E-postayı Gönder (Hata yönetimi ile)
-    // Not: Canlıya geçmeden önce SMTP ayarları yapılmalıdır.
-    // transporter.sendMail(mailOptions, (error, info) => { if (error) console.log(error); else console.log('Email gönderildi: ' + info.response); });
+    // 1. Veritabanına Kaydet (SQL)
+    const sql = `INSERT INTO orders (customer_name, customer_email, address, total_amount, items) VALUES (?, ?, ?, ?, ?)`;
+    const params = [
+        orderData.customer.name,
+        orderData.customer.email,
+        `${orderData.customer.address}, ${orderData.customer.zip} ${orderData.customer.city}, ${orderData.customer.country || ''}`,
+        orderData.total,
+        JSON.stringify(orderData.items)
+    ];
     
-    res.status(201).json({
-        message: 'Sipariş başarıyla alındı!',
-        orderId: orderId
-    });
+    db.run(sql, params, function(err) {
+        if (err) {
+            console.error('Veritabanı kayıt hatası:', err.message);
+            return res.status(500).json({ error: err.message });
+        }
+        
+        const orderId = this.lastID;
+
+        // E-posta İçeriği Hazırla
+        const mailOptions = {
+            from: '"Pami & Mami Shop" <siparis@pamiundmami.com>',
+            to: "admin@pamiundmami.com", // Siparişin bildirileceği sizin adresiniz
+            subject: `Yeni Sipariş: #${orderId}`,
+            html: `
+                <h1>🎉 Yeni Sipariş Alındı!</h1>
+                <p><strong>Sipariş No:</strong> #${orderId}</p>
+                <p><strong>Müşteri:</strong> ${orderData.customer.name}</p>
+                <p><strong>E-Posta:</strong> ${orderData.customer.email}</p>
+                <p><strong>Toplam Tutar:</strong> ${orderData.total}</p>
+                <hr>
+                <h3>Sipariş Detayları:</h3>
+                <ul>
+                    ${orderData.items.map(item => `<li>${item.name} - ${item.quantity} Adet (${item.price})</li>`).join('')}
+                </ul>
+                <hr>
+                <p><strong>Teslimat Adresi:</strong><br>
+                ${orderData.customer.address}<br>
+                ${orderData.customer.zip} ${orderData.customer.city}<br>
+                ${orderData.customer.country || ''}</p>
+            `
+        };
+
+        // E-postayı Gönder (Hata yönetimi ile)
+        // Not: Canlıya geçmeden önce SMTP ayarları yapılmalıdır.
+        // transporter.sendMail(mailOptions, (error, info) => { if (error) console.log(error); else console.log('Email gönderildi: ' + info.response); });
+        
+        res.status(201).json({
+            message: 'Sipariş başarıyla alındı!',
+            orderId: orderId
+        });
     });
 });
 

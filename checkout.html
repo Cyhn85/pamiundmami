@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ödeme & Sipariş | Pami & Mami</title>
+    <title>Kasse & Bestellung | Pami & Mami</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,14 +11,25 @@
 
     <!-- HEADER -->
     <header>
-        <a href="index.html" class="logo">pami <span>&</span> mami</a>
+        <a href="index.html" class="logo">pami und mami</a>
         <ul class="nav-links">
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="#">Ürünler</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="index.html#products">Produkte</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Kontakt</a></li>
         </ul>
         <div style="display: flex; gap: 20px; align-items: center;">
+            <!-- Dil Seçeneği -->
+            <div class="language-selector">
+                <button class="lang-btn">DE <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></button>
+                <div class="lang-dropdown">
+                    <a href="#">English <span>EN</span></a>
+                    <a href="#">Nederlands <span>NL</span></a>
+                    <a href="#">Français <span>FR</span></a>
+                    <a href="#">Español <span>ES</span></a>
+                </div>
+            </div>
+
             <div class="cart-icon">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="cart-count">0</span>
@@ -33,32 +44,32 @@
 
     <!-- CHECKOUT SECTION -->
     <section class="checkout-section">
-        <h1 class="page-title">Siparişi Tamamla</h1>
+        <h1 class="page-title">Bestellung abschließen</h1>
         <div class="checkout-container">
             <!-- Sol: Adres Formu -->
             <div class="checkout-form">
-                <h2>Teslimat Bilgileri</h2>
+                <h2>Lieferadresse</h2>
                 <form id="orderForm">
                     <div class="form-group">
-                        <label>Ad Soyad</label>
-                        <input type="text" id="customerName" placeholder="Adınız ve Soyadınız" required>
+                        <label>Vor- und Nachname</label>
+                        <input type="text" id="customerName" placeholder="Max Mustermann" required>
                     </div>
                     <div class="form-group">
-                        <label>E-Posta</label>
-                        <input type="email" id="customerEmail" placeholder="ornek@email.com" required>
+                        <label>E-Mail</label>
+                        <input type="email" id="customerEmail" placeholder="beispiel@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Adres</label>
-                        <textarea id="customerAddress" rows="3" placeholder="Sokak, Bina No, Daire..." required></textarea>
+                        <label>Straße und Hausnummer</label>
+                        <textarea id="customerAddress" rows="2" placeholder="Musterstraße 12" required></textarea>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Şehir</label>
-                            <input type="text" id="customerCity" required>
+                            <label>Stadt</label>
+                            <input type="text" id="customerCity" placeholder="Berlin" required>
                         </div>
                         <div class="form-group">
-                            <label>Posta Kodu</label>
-                            <input type="text" id="customerZip" required>
+                            <label>PLZ</label>
+                            <input type="text" id="customerZip" placeholder="10115" required>
                         </div>
                     </div>
                 </form>
@@ -66,17 +77,17 @@
 
             <!-- Sağ: Sipariş Özeti -->
             <div class="order-summary">
-                <h2>Sepetiniz</h2>
+                <h2>Warenkorb</h2>
                 <div id="checkout-cart-items">
                     <!-- JavaScript ile doldurulacak -->
                 </div>
                 
                 <div class="cart-total">
-                    <span>Toplam Tutar:</span>
+                    <span>Gesamtsumme:</span>
                     <span id="cart-total-price">0.00 €</span>
                 </div>
 
-                <button class="checkout-btn" type="submit" form="orderForm">Siparişi Onayla</button>
+                <button class="checkout-btn" type="submit" form="orderForm">Kostenpflichtig bestellen</button>
             </div>
         </div>
     </section>
@@ -86,10 +97,10 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>pami & mami</h3>
-                <p>Sevgiyle örülen, doğallıkla sarılan minik dünyalar.</p>
+                <p>Mit Liebe gestrickte, natürlich umhüllte kleine Welten.<br>Am Omnibushof 12, 13593 Berlin</p>
             </div>
             <div class="footer-links">
-                <h4>Yasal</h4>
+                <h4>Rechtliches</h4>
                 <ul>
                     <li><a href="impressum.html">Impressum</a></li>
                     <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -97,7 +108,7 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2024 Pami & Mami.</div>
+        <div class="footer-bottom">&copy; 2024 Pami & Mami. Alle Rechte vorbehalten.</div>
     </footer>
 
     <script src="script.js"></script>

@@ -36,9 +36,28 @@ if (cookieContainer && cookieBtn) {
     }, 2000);
 }
 
+// LANGUAGE SELECTOR LOGIC
+const languageSelector = document.getElementById('languageSelector');
+if (languageSelector) {
+    languageSelector.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        alert(`Sprache geändert zu: ${lang.toUpperCase()} (Demo)`);
+const langLinks = document.querySelectorAll('.lang-dropdown a');
+if (langLinks.length > 0) {
+    langLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const langText = e.currentTarget.textContent.trim().split(' ')[0];
+            alert(`Sprache geändert zu: ${langText} (Demo)`);
+        });
+    });
+}
+
 // --- FAZ 4.5: AUTH, ADMIN & ÜRÜN YÖNETİMİ ---
 
-const API_URL = 'http://localhost:3000'; // CANLIYA ALIRKEN BURAYI SUNUCU ADRESİ YAPIN (Örn: https://api.pamiundmami.com)
+// ÖNEMLİ: Canlıya alırken buraya Hetzner Sunucu IP adresini yazmalısın!
+// Örn: 'http://192.168.1.1:3000' veya varsa 'https://api.pamiundmami.com'
+const API_URL = 'http://localhost:3000'; 
 
 let allProducts = []; // Tüm ürünleri hafızada tutmak için
 
@@ -58,9 +77,11 @@ async function fetchProducts() {
         if (products.length === 0) {
             // Demo ürünleri manuel ekleyelim ki site boş görünmesin
             const demoProducts = [
-                { name: "Tavşan Kulaklı Patik", category: "Organik Pamuk", price: "12.90 €", image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=800&auto=format&fit=crop", badge: "Yeni" },
-                { name: "İsimli Emzik Zinciri", category: "Ahşap & Örgü", price: "15.50 €", image: "https://images.unsplash.com/photo-1628257007727-882298715842?q=80&w=800&auto=format&fit=crop", badge: "" },
-                { name: "Makrome Toka Seti", category: "3'lü Set", price: "9.90 €", image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=800&auto=format&fit=crop", badge: "Popüler" }
+                { name: "Hasenohr-Babyschuhe", category: "Bio-Baumwolle", price: "12.90 €", image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=800&auto=format&fit=crop", badge: "Neu" },
+                { name: "Personalisierte Schnullerkette", category: "Holz & Strick", price: "15.50 €", image: "https://images.unsplash.com/photo-1628257007727-882298715842?q=80&w=800&auto=format&fit=crop", badge: "" },
+                { name: "Strickrassel Löwe", category: "Bio-Baumwolle", price: "18.90 €", image: "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=800&auto=format&fit=crop", badge: "" },
+                { name: "Babydecke Musselin", category: "100% Baumwolle", price: "24.90 €", image: "https://images.unsplash.com/photo-1522771753035-a15806bb81ce?q=80&w=800&auto=format&fit=crop", badge: "Angebot" },
+                { name: "Holzgreifling", category: "Naturbelassen", price: "11.50 €", image: "https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?q=80&w=800&auto=format&fit=crop", badge: "" }
             ];
             allProducts = demoProducts; // Demo ürünleri de hafızaya al
             demoProducts.forEach(p => renderProductCard(p, grid));

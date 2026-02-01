@@ -44,18 +44,21 @@
 
 ### FAZ 5: CANLIYA ALMA (DEPLOY)
 - [x] ✅ 21. Son kontroller (SEO, Meta Tagler, Tablet Uyumu) ve Mobil Test.
+- [x] ✅ 22. İletişim Bilgileri Güncellemesi (Berlin Adresi).
+- [x] ✅ 23. Almanca Çeviri ve Modern Dil Seçeneği (2026 Tasarımı).
+- [x] ✅ 24. Kleinunternehmer (§ 19 UStG) ve Uluslararası Kargo Mantığı.
 
 #### GITHUB (KOD DEPOSU)
 - [x] ✅ 22. Git Başlatma ve Dosyaları Ekleme (`git init`, `git add`).
 - [x] ✅ 23. İlk Commit (`git commit`).
-- [ ] 🔴 24. Remote Bağlantısı ve Push (`git remote add`, `git push`).
+- [x] ✅ 24. Remote Bağlantısı ve Push (`git remote add`, `git push`).
 
 #### CLOUDFLARE (FRONTEND HOSTING)
-- [ ] 🔴 25. Cloudflare Pages Projesi Oluşturma.
-- [ ] 🔴 26. GitHub Reposunu Bağlama ve Deploy.
+- [x] ✅ 25. Cloudflare Pages Projesi Oluşturma.
+- [x] ✅ 26. GitHub Reposunu Bağlama ve Deploy (Otomatik).
 
 #### HETZNER (BACKEND HOSTING)
 - [ ] 🔴 27. Sunucuya Kodun Çekilmesi ve PM2 Kurulumu.
 
 ---
-**NOT:** Windsurf, bir maddeyi bitirdiğinde burayı güncelle ve bir sonraki maddeye geçmeden önce kullanıcıdan onay bekle.
+**NOT:** Bir maddeyi bitirdiğinde burayı güncelle ve bir sonraki maddeye geçmeden önce kullanıcıdan onay bekle.
