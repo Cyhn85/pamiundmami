@@ -58,7 +58,9 @@
 - [x] ✅ 26. GitHub Reposunu Bağlama ve Deploy (Otomatik).
 
 #### HETZNER (BACKEND HOSTING)
-- [ ] 🔴 27. Sunucuya Kodun Çekilmesi ve PM2 Kurulumu.
+- [x] ✅ 27. Sunucuya Kodun Çekilmesi ve PM2 Kurulumu.
+- [x] ✅ 28. CI/CD Otomasyonu (GitHub Actions ile Otomatik Deploy).
+- [x] ✅ 29. SSL ve Domain Bağlantısı (Cloudflare DNS ve SSL Ayarları).
 
 ---
 **NOT:** Bir maddeyi bitirdiğinde burayı güncelle ve bir sonraki maddeye geçmeden önce kullanıcıdan onay bekle.

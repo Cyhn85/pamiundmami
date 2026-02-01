@@ -55,9 +55,9 @@ if (langLinks.length > 0) {
 
 // --- FAZ 4.5: AUTH, ADMIN & ÜRÜN YÖNETİMİ ---
 
-// ÖNEMLİ: Canlıya alırken buraya Hetzner Sunucu IP adresini yazmalısın!
-// Örn: 'http://192.168.1.1:3000' veya varsa 'https://api.pamiundmami.com'
-const API_URL = 'http://localhost:3000'; 
+// API Adresi (Cloudflare üzerinden SSL ile)
+const API_URL = 'https://api.pamiundmami.com'; 
+const API_URL = 'https://api.pamiundmami.de'; 
 
 let allProducts = []; // Tüm ürünleri hafızada tutmak için
 
